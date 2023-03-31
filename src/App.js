@@ -11,7 +11,7 @@ const App = () => {
             <div className="app_container">
                 <SideBar />
                 <Container fluid className="app_main">
-                    <HomeScreen />
+                    <HomeScreen/>
                 </Container>
             </div>
         </>
