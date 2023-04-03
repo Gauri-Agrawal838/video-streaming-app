@@ -1,19 +1,28 @@
 @import "../../_base.scss";
 
+
+nav {
+   position: fixed;
+}
+
+
 .sideBar {
-   background: $black-secondary;
+   background: $black-primary;
 
    display: flex;
    flex-direction: column;
-
    width: 250px;
    height: 90vh;
    padding-top: 2rem;
    transition: transform 0.2s ease-in;
+   margin-top: 10vh;
+
+
+
    li {
       display: flex;
       align-items: center;
-
+      color: #b1bdb4;
       padding: 0.6rem 1.5rem;
       margin: 0.2rem 0;
       cursor: pointer;
@@ -42,14 +51,17 @@
 @media (max-width: $breakpoint-medium) {
    .sideBar {
       width: 90px;
+
       li {
          justify-content: center;
       }
+
       span {
          display: none;
       }
    }
 }
+
 @media (max-width: $breakpoint-small) {
    .sideBar {
       transform: translateX(-100%);
