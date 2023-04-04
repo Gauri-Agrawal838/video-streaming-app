@@ -14,3 +14,8 @@ npm i react-router-dom
 npm i firebase
 
 Firebase project name : video-streaming-app2 
+
+
+04/04/2023 : 07:21
+npm install firebase --save
+npm install firebase-admin --save
