@@ -19,3 +19,18 @@ Firebase project name : video-streaming-app2
 04/04/2023 : 07:21
 npm install firebase --save
 npm install firebase-admin --save
+
+10-04-23
+npm i axios numeral moment
+
+
+
+
+
+Under package.JSON
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
