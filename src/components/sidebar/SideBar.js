@@ -31,37 +31,37 @@ const Sidebar = ({ sideBar, handleToggleSidebar }) => {
          className={sideBar ? "sideBar open" : "sideBar"}
          onClick={() => handleToggleSidebar(false)}>
          <li>
-            <MdHome size={23} />
+            <MdHome size={23} className="icon" />
             <span>Home</span>
          </li>
          <li>
-            <MdSubscriptions size={23} />
+            <MdSubscriptions size={23} className="icon" />
             <span>Subscriptions</span>
          </li>
 
          <li>
-            <MdThumbUp size={23} />
+            <MdThumbUp size={23} className="icon" />
             <span>Liked Video</span>
          </li>
 
          <li>
-            <MdHistory size={23} />
+            <MdHistory size={23} className="icon" />
             <span>History</span>
          </li>
 
          <li>
-            <MdLibraryBooks size={23} />
+            <MdLibraryBooks size={23} className="icon" />
             <span>Library</span>
          </li>
          <li>
-            <MdSentimentDissatisfied size={23} />
+            <MdSentimentDissatisfied size={23} className="icon" />
             <span>I don't Know</span>
          </li>
 
          <hr />
 
          <li onClick={logoutHandler}>
-            <MdExitToApp size={23} />
+            <MdExitToApp size={23} className="icon" />
             <span>Log Out</span>
          </li>
 
