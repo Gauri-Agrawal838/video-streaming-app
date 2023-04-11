@@ -7,13 +7,20 @@
     place-items: center;
 
     &_container {
-        background-color: $black-secondary;
+        // background-color: $black-secondary;
         padding: 2rem;
         margin: 0 1rem;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: absolute;
+
+        background: rgba(9, 9, 9, 0.6);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
 
         button {
             padding: .5rem;
@@ -31,6 +38,14 @@
             background: none;
             color: $text-color;
         }
+
+
+    }
+
+    video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 
     img {
