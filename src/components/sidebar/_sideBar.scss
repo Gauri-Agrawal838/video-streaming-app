@@ -7,15 +7,16 @@ nav {
 
 
 .sideBar {
-   background: $black-primary;
+   // background: $black-primary;
+   background: none;
 
    display: flex;
    flex-direction: column;
-   width: 250px;
+   width: 200px;
    height: 90vh;
    padding-top: 2rem;
    transition: transform 0.2s ease-in;
-   margin-top: 10vh;
+   // margin-top: 10vh;
 
 
 
@@ -36,7 +37,18 @@ nav {
 
       &:hover {
          background-color: $border-color;
+
+         span {
+            background-color: $border-color;
+         }
+
+         .icon {
+            background-color: $border-color;
+         }
+
       }
+
+
    }
 
    hr {
@@ -46,6 +58,8 @@ nav {
    &.open {
       transform: translateX(0);
    }
+
+
 }
 
 @media (max-width: $breakpoint-medium) {
