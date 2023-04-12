@@ -40,5 +40,8 @@ Under package.JSON
 'rafce' - for react boilerplate-------------------------------------------------------
 
 11/04/2023 : 08:41
-
 npm i react-infinite-scroll-component react-loading-skeleton react-lazy-load-image-component
+
+
+12/04/2023 : 09:46
+npm i react-show-more-text
