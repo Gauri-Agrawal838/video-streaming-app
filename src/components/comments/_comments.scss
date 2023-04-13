@@ -1,1 +1,38 @@
 @import "../../_base.scss";
+
+$text-color: #b1bdb4;
+
+p {
+    color: $text-color;
+}
+
+.comments_form {
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #353946;
+        color: #fff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: #353946;
+        color: #fff;
+        letter-spacing: .5px;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
