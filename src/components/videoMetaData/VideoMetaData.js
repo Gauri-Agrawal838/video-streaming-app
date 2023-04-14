@@ -5,23 +5,30 @@ import { MdThumbUp, MdThumbDown } from 'react-icons/md'
 import './_videoMetaData.scss'
 import ShowMoreText from 'react-show-more-text'
 
-const VideoMetaData = () => {
+const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
+
+
+    const { channelId, channelTitle, description, title, publishedAt } = snippet
+    const { viewCount, likeCount, dislikeCount } = statistics
+
+
+
     return (
         // padding top and bottom(py - 2)
         <div className='videoMetaData py-2'>
             <div className='videoMetaData_top'>
-                <h5>Video Title</h5>
+                <h5>{title}</h5>
                 <div className='d-flex justify-content-between align-item-center py-1'>
                     <span>
-                        {numeral(100000).format("0.a")} Views •
-                        {moment('2022-08-05').fromNow()}
+                        {numeral(viewCount).format("0.a")} Views • {moment(publishedAt).fromNow()}
+
                     </span>
                     <div>
                         <span style={{ margin: '0 20px' }}>
-                            <MdThumbUp size={26} />{numeral(100000).format("0.a")}
+                            <MdThumbUp size={26} />{numeral(likeCount).format("0.a")}
                         </span>
                         <span>
-                            <MdThumbDown size={26} />{numeral(100000).format("0.a")}
+                            <MdThumbDown size={26} />{numeral(dislikeCount).format("0.a")}
                         </span>
                     </div>
                 </div>
@@ -35,7 +42,7 @@ const VideoMetaData = () => {
                         className='rounded-circle mr-3'
                     />
                     <div className='d-flex flex-column'>
-                        <span>Channel Name</span>
+                        <span>{channelTitle}</span>
                         <sapn>{numeral(100000).format("0.a")} Subscribers</sapn>
                     </div>
                 </div>
@@ -49,8 +56,10 @@ const VideoMetaData = () => {
                     less='SHOW LESS'
                     anchorClass='showMoreText'
                     expanded={false}
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eveniet a mollitia, iste eius dicta, velit minima, veniam quaerat debitis distinctio architecto id quidem. Quisquam officiis reprehenderit similique incidunt quidem quo nostrum perspiciatis, illum ea dicta quas commodi exercitationem! Officiis odit, deleniti veniam ex amet consequuntur? Sit quas quidem dolore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eveniet a mollitia, iste eius dicta, velit minima, veniam quaerat debitis distinctio architecto id quidem. Quisquam officiis reprehenderit similique incidunt quidem quo nostrum perspiciatis, illum ea dicta quas commodi exercitationem! Officiis odit, deleniti veniam ex amet consequuntur? Sit quas quidem dolore!
+                >
+                    {
+                        description
+                    }
                 </ShowMoreText>
             </div>
         </div>
