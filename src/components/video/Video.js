@@ -9,7 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useNavigate } from 'react-router-dom'
 
 
-
+ 
 
 const Video = ({ video }) => {
 
