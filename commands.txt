@@ -45,3 +45,7 @@ npm i react-infinite-scroll-component react-loading-skeleton react-lazy-load-ima
 
 12/04/2023 : 09:46
 npm i react-show-more-text
+
+18-04-23
+https://developers.google.com/youtube/v3/docs
+https://developers.google.com/youtube/v3/guides/implementation
