@@ -32,14 +32,14 @@ const Video = ({ video }) => {
       const { data: { items } } = await request('/videos', {
         params: {
           part: 'contentDetails,statistics',
-          id: { _videoId },
+          id: _videoId,
         }
       }[_videoId])
       setDuration(items[0].contentDetails.duration)
       setViews(items[0].statistics.viewCount)
     }
     get_video_details()
-  }, [id])
+  }, [_videoId])
 
   useEffect(() => {
     const get_channel_icon = async () => {
