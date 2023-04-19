@@ -28,7 +28,9 @@ $text-color: #b1bdb4;
             border-radius: 5px;
             text-transform: uppercase;
             letter-spacing: .5px;
-
+            &.btn-gray{
+                background-color: gray;
+            }
             &:hover {
                 color: #fff;
             }
