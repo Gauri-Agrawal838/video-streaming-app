@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/auth.action";
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import background from '../../assests/background.mp4'
+import background1 from '../../assests/background1.mp4'
 
 const LoginScreen = () => {
 
@@ -30,7 +30,7 @@ const LoginScreen = () => {
 
     return (
         <div className="login">
-            <video src={background} autoPlay loop muted></video>
+            <video src={background1} autoPlay loop muted></video>
             <div className="login_container">
                 <img src="http://pngimg.com/uploads/youtube/youtube_PNG2.png" alt=""></img>
                 <button onClick={handleLogin}>Login with Google</button>
