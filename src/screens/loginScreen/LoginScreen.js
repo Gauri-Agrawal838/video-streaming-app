@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/actions/auth.action";
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import background from '../../assests/background.mp4'
+import background from '../../assests/background1.mp4'
 
 const LoginScreen = () => {
 
