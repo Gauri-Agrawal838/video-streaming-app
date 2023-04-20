@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-   addComment,
-   getCommentsOfVideoById,
-} from '../../redux/actions/comments.action'
+import { addComment, getCommentsOfVideoById } from '../../redux/actions/comments.action'
 import Comment from '../comment/Comment'
 import './_comments.scss'
+
+
+
+
 const Comments = ({ videoId, totalComments }) => {
    const dispatch = useDispatch()
 
@@ -33,7 +34,7 @@ const Comments = ({ videoId, totalComments }) => {
    return (
       <div className='comments'>
          <p>{totalComments} Comments</p>
-         <div className='my-2 comments__form d-flex w-100'>
+         <div className='my-2 comments_form d-flex w-100'>
             <img src={photoURL} alt='avatar' className='mr-3 rounded-circle' />
             <form onSubmit={handleComment} className='d-flex flex-grow-1'>
                <input
@@ -46,7 +47,7 @@ const Comments = ({ videoId, totalComments }) => {
                <button className='p-2 border-0'>Comment</button>
             </form>
          </div>
-         <div className='comments__list'>
+         <div className='comments_list'>
             {_comments?.map((comment, i) => (
                <Comment comment={comment} key={i} />
             ))}

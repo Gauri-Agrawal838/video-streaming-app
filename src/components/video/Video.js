@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom'
 const Video = ({ video, channelScreen }) => {
    const {
       id,
-      snippet: {channelId,channelTitle,title,publishedAt,thumbnails: { medium },
+      snippet: { channelId, channelTitle, title, publishedAt, thumbnails: { medium },
       },
       contentDetails,
    } = video
@@ -77,8 +77,8 @@ const Video = ({ video, channelScreen }) => {
             <span> {moment(publishedAt).fromNow()} </span>
          </div>
          {!channelScreen && (
-            <div className='video__channel'>
-               <LazyLoadImage src={channelIcon?.url} effect='blur' />
+            <div className='video_channel d-flex'>
+               <LazyLoadImage src={channelIcon?.url} effect='blur' className='img' />
 
                <p>{channelTitle}</p>
             </div>

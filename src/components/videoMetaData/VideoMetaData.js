@@ -54,7 +54,7 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
                </div>
             </div>
          </div>
-         <div className='py-3 my-2 videoMetaData__channel d-flex justify-content-between align-items-center'>
+         <div className='py-3 my-2 videoMetaData_channel d-flex justify-content-between align-items-center'>
             <div className='d-flex'>
                <img
                   src={channelSnippet?.thumbnails?.default?.url}
@@ -74,9 +74,8 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
             </div>
 
             <button
-               className={`p-2 m-2 border-0 btn ${
-                  subscriptionStatus && 'btn-gray'
-               }`}>
+               className={`p-2 m-2 border-0 btn ${subscriptionStatus && 'btn-gray'
+                  }`}>
                {subscriptionStatus ? 'Subscribed' : 'Subscribe'}
             </button>
          </div>
