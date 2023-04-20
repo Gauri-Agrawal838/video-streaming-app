@@ -16,8 +16,8 @@ const Comment = ({ comment }) => {
             alt=''
             className='mr-3 rounded-circle'
          />
-         <div className='comment__body'>
-            <p className='mb-1 comment__header'>
+         <div className='comment_body'>
+            <p className='mb-1 comment_header'>
                {authorDisplayName} • {moment(publishedAt).fromNow()}
             </p>
             <p className='mb-0'>{textDisplay}</p>
