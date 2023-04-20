@@ -77,7 +77,7 @@ const Video = ({ video, channelScreen }) => {
             <span> {moment(publishedAt).fromNow()} </span>
          </div>
          {!channelScreen && (
-            <div className='video__channel'>
+            <div className='video_channel'>
                <LazyLoadImage src={channelIcon?.url} effect='blur' />
 
                <p>{channelTitle}</p>
