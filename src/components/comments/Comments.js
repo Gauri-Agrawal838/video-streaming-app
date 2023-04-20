@@ -33,7 +33,7 @@ const Comments = ({ videoId, totalComments }) => {
    return (
       <div className='comments'>
          <p>{totalComments} Comments</p>
-         <div className='my-2 comments__form d-flex w-100'>
+         <div className='my-2 comments_form d-flex w-100'>
             <img src={photoURL} alt='avatar' className='mr-3 rounded-circle' />
             <form onSubmit={handleComment} className='d-flex flex-grow-1'>
                <input
@@ -46,7 +46,7 @@ const Comments = ({ videoId, totalComments }) => {
                <button className='p-2 border-0'>Comment</button>
             </form>
          </div>
-         <div className='comments__list'>
+         <div className='comments_list'>
             {_comments?.map((comment, i) => (
                <Comment comment={comment} key={i} />
             ))}
