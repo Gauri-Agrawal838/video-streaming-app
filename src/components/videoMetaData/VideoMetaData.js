@@ -35,7 +35,7 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
       <div className='py-2 videoMetaData'>
          {/* <HelmetCustom title={title} description={description} /> */}
 
-         <div className='videoMetaData__top'>
+         <div className='videoMetaData_top'>
             <h5>{title}</h5>
             <div className='py-1 d-flex justify-content-between align-items-center'>
                <span>
@@ -79,7 +79,7 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
                {subscriptionStatus ? 'Subscribed' : 'Subscribe'}
             </button>
          </div>
-         <div className='videoMetaData__description'>
+         <div className='videoMetaData_description'>
             <ShowMoreText
                lines={3}
                more='SHOW MORE'
