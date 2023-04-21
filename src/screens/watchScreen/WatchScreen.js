@@ -31,7 +31,7 @@ const WatchScreen = () => {
    const { video, loading } = useSelector(state => state.selectedVideo)
 
    return (
-      <Row className='cont'>
+      <Row>
          {/* <Helmet>
             <title>{video?.snippet?.title}</title>
          </Helmet> */}
@@ -55,6 +55,7 @@ const WatchScreen = () => {
                videoId={id}
                totalComments={video?.statistics?.commentCount}
             />
+
          </Col>
          <Col lg={4}>
             {!loading ? (
