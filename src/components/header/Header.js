@@ -8,18 +8,18 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = ({ handleToggleSidebar }) => {
 
-   const [input,setInput] = useState('');
+   const [input, setInput] = useState('');
 
    const navigate = useNavigate();
 
    const handleSubmit = (e) => {
       e.preventDefault()
-      navigate('search/${input}')
+      navigate('/search/${input}')
    }
 
 
-  return (
-    <div className="header ">
+   return (
+      <div className="header ">
          <FaBars
             className="header__menu"
             size={26}
