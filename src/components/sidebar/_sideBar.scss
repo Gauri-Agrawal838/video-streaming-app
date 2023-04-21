@@ -1,10 +1,10 @@
 @import "../../_base.scss";
 
 
-nav {
-   position: fixed;
-   top: 10vh;
-}
+// nav {
+//    position: fixed;
+//    top: 10vh;
+// }
 
 
 .sideBar {
@@ -13,11 +13,12 @@ nav {
 
    display: flex;
    flex-direction: column;
-   width: 200px;
+   width: 250px;
    height: 90vh;
    padding-top: 2rem;
    transition: transform 0.2s ease-in;
    // margin-top: 10vh;
+   // position: fixed;
 
 
 
