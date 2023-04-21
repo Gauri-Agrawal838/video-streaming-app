@@ -31,11 +31,14 @@ const Sidebar = ({ sideBar, handleToggleSidebar }) => {
       <nav
          className={sideBar ? "sideBar open" : "sideBar"}
          onClick={() => handleToggleSidebar(false)}>
-         <li>
-            <MdHome size={23} className="icon" />
-            <span>Home</span>
-         </li>
-         <Link to='/feed/subscriptions'>
+
+         <Link to='/' style={{ textDecoration: 'none' }}>
+            <li>
+               <MdHome size={23} className="icon" />
+               <span>Home</span>
+            </li>
+         </Link>
+         <Link to='/feed/subscriptions' style={{ textDecoration: 'none' }}>
             <li>
                <MdSubscriptions size={23} className="icon" />
                <span>Subscriptions</span>
