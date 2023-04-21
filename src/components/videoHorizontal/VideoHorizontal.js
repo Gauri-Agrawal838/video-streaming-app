@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const VideoHorizontal = ({ video, searchScreen }) => {
+const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
   const {
     id,
     snippet: {
@@ -19,13 +19,17 @@ const VideoHorizontal = ({ video, searchScreen }) => {
       publishedAt,
       thumbnails: { medium },
     },
+    resourceId
   } = video;
 
   const [views, setViews] = useState(null);
   const [duration, setDuration] = useState(null);
   const [channelIcon, setChannelIcon] = useState(null);
 
-  const isVideo = !(id.kind === "youtube#channel");
+  const isVideo = !(id.kind === "youtube#channel" || subScreen)
+
+
+
   useEffect(() => {
     const get_video_details = async () => {
       const {
@@ -61,9 +65,12 @@ const VideoHorizontal = ({ video, searchScreen }) => {
   const _duration = moment.utc(seconds * 1000).format("mm:ss");
 
   const navigate = useNavigate();
+
+  const _channelId = resourceId?.channelId || channelId
+
   const handleClick = () => {
-    
-    isVideo? navigate(`/watch/${id.videoId}`): navigate(`/channel/${id.channelId}`)
+
+    isVideo ? navigate(`/watch/${id.videoId}`) : navigate(`/channel/${_channelId}`)
   };
 
   const thumbnail = !isVideo && "videoHorizontal_thumbnail-channel";
@@ -71,15 +78,13 @@ const VideoHorizontal = ({ video, searchScreen }) => {
   return (
     <Row
       className="m-1 py-2 videoHorizontal align-items-center"
-      onClick={handleClick}
-    >
-      <Col xs={6} md={searchScreen ? 4 : 6} className="videoHorizontal_left">
+      onClick={handleClick}>
+      <Col xs={6} md={searchScreen || subScreen ? 4 : 6} className="videoHorizontal_left">
         <LazyLoadImage
           src={medium.url}
           effect="blur"
           className={`videoHorizontal_thumbnail ${thumbnail} `}
-          wrapperClassName="videoHorizontal_thumbnail-wrapper"
-        />
+          wrapperClassName="videoHorizontal_thumbnail-wrapper" />
 
         {isVideo && (
           <span className="videoHorizontal_duration">{_duration}</span>
@@ -88,7 +93,7 @@ const VideoHorizontal = ({ video, searchScreen }) => {
       </Col>
       <Col
         xs={6}
-        md={searchScreen ? 8 : 6}
+        md={searchScreen || subScreen ? 8 : 6}
         className="videoHorizontal_right p-0"
       >
         <p className="videoHorizontal_title mb-1">{title}</p>
@@ -100,14 +105,26 @@ const VideoHorizontal = ({ video, searchScreen }) => {
           </div>
         )}
 
-        {isVideo && <p className="mt-1">{description}</p>}
+        {(searchScreen || subScreen) && <p className="mt-1  videoHorizontal_desc">{description}</p>}
         <div className="videoHorizontal_channel d-flex align-items-center mt-1">
           {/* //TODO show in search screen */}
           {isVideo && <LazyLoadImage src={channelIcon?.url} effect="blur" />}
           <p className="mb-0">{channelTitle}</p>
         </div>
+
+        {
+          subScreen && (
+            < p className="mt-2">
+              {
+                video.contentDetails.totalItemCount
+              }{' '}Videos
+            </p>
+          )
+        }
+
+
       </Col>
-    </Row>
+    </Row >
   );
 };
 
