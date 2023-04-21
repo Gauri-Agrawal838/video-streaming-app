@@ -4,6 +4,8 @@
 .videoHorizontal {
     border-bottom: .3px solid $border-color;
     cursor: pointer;
+    width: calc(100vw - 15vw);
+    float: right;
 
     &_left {
         position: relative;
@@ -12,6 +14,7 @@
 
     &_thumbnail {
         width: 100%;
+
         &-channel {
             width: 50%;
             border-radius: 50%;
@@ -25,7 +28,7 @@
     &_duration {
         position: absolute;
         bottom: 0.6rem;
-        right: 1.2rem;
+        right: 1.5rem;
 
         font-size: 0.9rem;
         padding: .2rem;
@@ -60,6 +63,10 @@
             font-size: .9rem;
             @include line-clamp(1)
         }
+    }
+
+    &_desc {
+        @include line-clamp(2)
     }
 }
 
