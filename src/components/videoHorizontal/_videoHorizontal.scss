@@ -4,12 +4,12 @@
 .videoHorizontal {
     border-bottom: .3px solid $border-color;
     cursor: pointer;
-    width: calc(100vw - 15vw);
-    float: right;
+
 
     &_left {
         position: relative;
         text-align: center;
+        padding-left: 0 !important;
     }
 
     &_thumbnail {
