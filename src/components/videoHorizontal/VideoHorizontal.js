@@ -18,8 +18,8 @@ const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
       title,
       publishedAt,
       thumbnails: { medium },
+      resourceId
     },
-    resourceId
   } = video;
 
   const [views, setViews] = useState(null);
@@ -105,7 +105,8 @@ const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
           </div>
         )}
 
-        {(searchScreen || subScreen) && <p className="mt-1  videoHorizontal_desc">{description}</p>}
+        {(searchScreen || subScreen) && (<p className="mt-1  videoHorizontal_desc">{description}</p>)}
+
         <div className="videoHorizontal_channel d-flex align-items-center mt-1">
           {/* //TODO show in search screen */}
           {isVideo && <LazyLoadImage src={channelIcon?.url} effect="blur" />}
@@ -117,7 +118,7 @@ const VideoHorizontal = ({ video, searchScreen, subScreen }) => {
             < p className="mt-2">
               {
                 video.contentDetails.totalItemCount
-              }{' '}Videos
+              } Videos
             </p>
           )
         }
