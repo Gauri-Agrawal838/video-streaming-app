@@ -14,6 +14,7 @@ import WatchScreen from './screens/watchScreen/WatchScreen'
 import SearchScreen from './screens/searchScreen/SearchScreen'
 import SubscriptionScreen from './screens/subscriptionScreen/SubscriptionScreen'
 import ChannelScreen from './screens/channelScreen/ChannelScreen'
+import AboutScreen from './screens/aboutScreen/AboutScreen'
 
 
 
@@ -21,13 +22,15 @@ import ChannelScreen from './screens/channelScreen/ChannelScreen'
 const Layout = ({ children }) => {
    const [sidebar, toggleSidebar] = useState(false)
 
-   const handleToggleSidebar = () => toggleSidebar(value => !value)
+   const handleToggleSidebar = () => toggleSidebar(!sidebar)
+
 
    return (
       <>
          <Header handleToggleSidebar={handleToggleSidebar} />
          <div className='app_container'>
             <Sidebar
+               className={sidebar ? "sideBar open" : "sideBar"}
                sidebar={sidebar}
                handleToggleSidebar={handleToggleSidebar}
             />
@@ -74,6 +77,8 @@ const App = () => {
          <Route path='/feed/subscriptions' exact element={<Layout><SubscriptionScreen /></Layout>} />
 
          <Route path='/channel/:channelId' exact element={<Layout><ChannelScreen /></Layout>} />
+
+         <Route path='/about' exact element={<Layout><AboutScreen /></Layout>} />
 
 
          <Route exact element={<Navigate to='/' />} />
