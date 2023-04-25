@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './_channelScreen.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { Col, Container, Row } from "react-bootstrap";
@@ -13,6 +13,13 @@ import numeral from 'numeral';
 const ChannelScreen = () => {
 
     const { channelId } = useParams()
+
+    const [subValue, setSubValue] = useState(true)
+
+    const handleSubValue = () => {
+        setSubValue(!subValue)
+    }
+
 
     const dispatch = useDispatch()
 
@@ -40,7 +47,7 @@ const ChannelScreen = () => {
                         </span>
                     </div>
                 </div>
-                <button>Subscribe</button>
+                <button onClick={handleSubValue} className={subValue ? 'subscribe' : 'subscribe nots'} >{subValue ? 'Subscribed' : 'Subscribe'}</button>
             </div>
 
             <Container>

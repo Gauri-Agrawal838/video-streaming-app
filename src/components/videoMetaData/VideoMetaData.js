@@ -10,6 +10,7 @@ import {
    checkSubscriptionStatus,
    getChannelDetails,
 } from '../../redux/actions/channel.action'
+import { useState } from 'react'
 // import HelmetCustom from '../HelmetCustom'
 
 
@@ -24,9 +25,20 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
       statistics: channelStatistics,
    } = useSelector(state => state.channelDetails.channel)
 
-   const subscriptionStatus = useSelector(
+   const [subscriptionStatus, setSubScriptionStatus] = useState(useSelector(
       state => state.channelDetails.subscriptionStatus
-   )
+   ))
+
+   const handleSubValue = () => {
+      setSubScriptionStatus(!subscriptionStatus)
+   }
+
+   const [isLiked, setLike] = useState(false)
+
+   const handleLike = () => {
+      setLike(!isLiked)
+   }
+
 
    useEffect(() => {
       dispatch(getChannelDetails(channelId))
@@ -47,12 +59,9 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
 
                <div>
                   <span className='mr-3'>
-                     <MdThumbUp size={26} /> {numeral(likeCount).format('0.a')}
+                     <MdThumbUp size={26} className={isLiked ? 'like' : 'dislike'} onClick={handleLike} /> {numeral(likeCount).format('0.a')}
                   </span>
-                  <span className='mr-3'>
-                     <MdThumbDown size={26} />{' '}
-                     {numeral(dislikeCount).format('0.a')}
-                  </span>
+
                </div>
             </div>
          </div>
@@ -75,8 +84,8 @@ const VideoMetaData = ({ video: { snippet, statistics }, videoId }) => {
                </div>
             </div>
 
-            <button
-               className={`p-2 m-2 border-0 btn ${subscriptionStatus && 'btn-gray'
+            <button onClick={handleSubValue}
+               className={`p-2 m-2 border-0 btn ${subscriptionStatus ? 'subscribe' : 'subscribe nots'
                   }`}>
                {subscriptionStatus ? 'Subscribed' : 'Subscribe'}
             </button>

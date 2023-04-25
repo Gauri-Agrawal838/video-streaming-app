@@ -31,7 +31,7 @@ const HomeScreen = () => {
     return (
         <Container className="con">
             <CategoriesBar />
-            <Row>
+            <Row className="sec">
                 <InfiniteScroll
                     dataLength={videos.length}
                     next={fetchData}
@@ -43,13 +43,13 @@ const HomeScreen = () => {
                 >
                     {!loading ? videos.map((video) => (
                         <Col lg={3} md={4} >
-                            <Video video={video} key={video.id} />
+                            <Video video={video} key={video.id} className='video' />
                         </Col>
                     ))
                         :
                         [...Array(20)].map(() => {
                             <Col lg={3} md={4} >
-                                <SkeletonVideo />
+                                <SkeletonVideo className='video' />
                             </Col>
                         })
 

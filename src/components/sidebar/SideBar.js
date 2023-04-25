@@ -30,7 +30,8 @@ const Sidebar = ({ sideBar, handleToggleSidebar }) => {
    return (
       <nav
          className={sideBar ? "sideBar open" : "sideBar"}
-         onClick={() => handleToggleSidebar(false)}>
+      // onClick={() => handleToggleSidebar(false)}
+      >
 
          <Link to='/' style={{ textDecoration: 'none' }}>
             <li>
@@ -45,24 +46,12 @@ const Sidebar = ({ sideBar, handleToggleSidebar }) => {
             </li>
          </Link>
 
-         <li>
-            <MdThumbUp size={23} className="icon" />
-            <span>Liked Video</span>
-         </li>
-
-         <li>
-            <MdHistory size={23} className="icon" />
-            <span>History</span>
-         </li>
-
-         <li>
-            <MdLibraryBooks size={23} className="icon" />
-            <span>Library</span>
-         </li>
-         <li>
-            <MdSentimentDissatisfied size={23} className="icon" />
-            <span>I don't Know</span>
-         </li>
+         <Link to='/about' style={{ textDecoration: 'none' }}>
+            <li>
+               <MdLibraryBooks size={23} className="icon" />
+               <span>About</span>
+            </li>
+         </Link>
 
          <hr />
 

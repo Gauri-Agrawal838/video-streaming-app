@@ -8,13 +8,14 @@
 
     &_container {
         // background-color: $black-secondary;
+        width: 50vw;
         padding: 2rem;
-        margin: 0 1rem;
         border-radius: 10px;
+        margin: 0 1rem;
         display: flex;
-        flex-direction: column;
         align-items: center;
         position: absolute;
+        box-shadow: 0 0 1rem #00e6f6;
 
         background: rgba(9, 9, 9, 0.6);
         backdrop-filter: blur(2px);
@@ -22,23 +23,27 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
 
-        button {
-            padding: .5rem;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            background-color: #fff;
+        &_left {
+            background: transparent;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            &:focus {
-                outline: none;
-            }
+        }
+
+        &_right {
+            background: transparent;
+            width: 50%;
+
+
         }
 
         p {
             background: none;
             color: $text-color;
+            font-size: 1.1rem;
         }
-
 
     }
 
@@ -48,10 +53,53 @@
         object-fit: cover;
     }
 
-    img {
-        height: 130px;
-        width: 130px;
+    .logo {
+        margin: 1.5rem 2rem 3rem 2rem;
+        width: 50%;
         object-fit: contain;
-        background: none;
+        background: #082a3a90;
+        padding: 1rem;
+        border: 1px solid #00e6f6;
+        border-radius: 1rem;
+        box-shadow: 0 0 2rem #00e6f6;
+    }
+
+    .text {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .glogo {
+        cursor: pointer;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 2rem;
+        height: 3rem;
+        width: 3rem;
+        background: transparent;
+    }
+
+    a {
+        background: transparent;
+    }
+}
+
+@media (max-width:$breakpoint-medium) {
+    .login {
+        &_container {
+            width: 80vw;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .login {
+        .logo {
+            width: 80%;
+        }
+
+        p {
+            font-size: .85rem
+        }
     }
 }

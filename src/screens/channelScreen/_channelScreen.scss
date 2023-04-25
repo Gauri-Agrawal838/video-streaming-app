@@ -22,15 +22,31 @@ $text-color: #b1bdb4;
         }
     }
 
-    button {
+    .subscribe {
         text-transform: uppercase;
-        background-color: red;
-        border-radius: 5px;
+        background-color: #1f6cab;
+        border-radius: 1rem;
         color: #fff;
         font-size: 1rem;
-        padding: .4rem;
+        padding: .4rem .6rem;
         border: none;
+        transition: .3s;
+
+        &:hover {
+            background-color: #00e6f6;
+            color: #082a3a;
+            box-shadow: 0 0 .5rem #00e6f6;
+        }
     }
+
+    .nots {
+        background: transparent;
+        border: 1px solid #00e6f6;
+        color: #00e6f6;
+        font-weight: bold;
+    }
+
+
 }
 
 @media (max-width :$breakpoint-medium) {

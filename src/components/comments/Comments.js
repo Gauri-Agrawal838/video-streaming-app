@@ -16,6 +16,7 @@ const Comments = ({ videoId, totalComments }) => {
 
    const comments = useSelector(state => state.commentList.comments)
    const { photoURL } = useSelector(state => state.auth?.user)
+   const { name } = useSelector(state => state.auth?.user) || 'DUMMY'
 
    const [text, setText] = useState('')
 
@@ -23,9 +24,40 @@ const Comments = ({ videoId, totalComments }) => {
       comment => comment.snippet.topLevelComment.snippet
    )
 
+
+   // const [_comments, setComment] = useState(commen)
+
+
+   // const addComment = (comm) => {
+   //    return setComment([..._comments, comm])
+   // }
+
+
+
    const handleComment = e => {
       e.preventDefault()
       if (text.length === 0) return
+
+      // const comm = {
+      //    videoId: 'sdlvhuu',
+      //    authorDisplayName: name,
+      //    authorProfileImageUrl: photoURL,
+      //    publishedAt: new Date(),
+      //    textDisplay: text,
+      //    textOriginal: text,
+      //    authorChannelUrl: photoURL,
+      //    authorChannelId: {
+      //       value: photoURL
+      //    },
+      //    canRate: true,
+      //    viewerRating: 'none',
+      //    likeCount: 1,
+      //    updatedAt: new Date()
+      // }
+
+      // console.log(comm)
+
+      // addComment(comm)
 
       dispatch(addComment(videoId, text))
 

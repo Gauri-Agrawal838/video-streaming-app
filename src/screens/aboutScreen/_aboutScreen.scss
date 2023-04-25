@@ -1,0 +1,52 @@
+.boox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #00e6f6;
+    margin-top: 2rem;
+
+    .heading {
+        text-shadow: 0 0 .6rem rgb(0, 0, 0);
+        font-size: 4rem;
+    }
+
+    .break {
+        width: 100%;
+        border: 2px solid #00e6f6;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        color: #00e6f6;
+        font-size: 2rem;
+    }
+
+    .main-head {
+        font-size: 3rem;
+        margin-top: 3rem;
+        text-shadow: 0 0 .6rem rgb(0, 0, 0);
+    }
+
+    .section {
+        width: 100%;
+        display: block;
+
+        .heads {
+
+            .data {
+
+                color: #a4b7f3;
+                font-size: 1.1rem;
+
+                span {
+                    font-weight: bold;
+                    color: #00e6f6;
+                    font-size: 1.3rem;
+                    margin-right: .3rem;
+                }
+            }
+        }
+    }
+}

@@ -25,61 +25,108 @@
    }
 
    &__logo {
-      width: 30px;
-      height: 30px;
+      width: 180px;
+      height: 40px;
       object-fit: contain;
       display: block;
    }
 
    form {
-      flex: 0.6;
+      flex: 0.5;
       display: flex;
       padding: 0.1rem;
       margin: 0 1rem;
-      border-radius: 3px;
-      border: 1.2px solid;
-      background-color: $black-secondary;
+      border-radius: 1.5rem;
+      // border: 1.2px solid;
+      // background-color: $black-secondary;
 
       input {
          width: 100%;
-         border: none;
+         border: 1.2px solid #00e6f6;
          font-weight: 500;
-         background: transparent;
+         // background: transparent;
          padding: 0.3rem;
          color: $text-color;
+         padding-left: 1rem;
+         border-radius: 1.5rem;
+         margin-right: .5rem;
+         background-color: $black-secondary;
 
          &:focus {
             outline: none;
+            box-shadow: 0 0 .5rem #00e6f6;
          }
       }
 
       button {
-         padding: 0 1.25rem;
-         color: $text-color;
-         background: transparent;
-         border: none;
+         padding: .5rem 1rem;
+         color: #00e6f6;
+         background: $black-secondary;
+         border: 1.2px solid #00e6f6;
+         border-radius: 1.5rem;
+         transition: .2s;
+
+         .icon {
+            transition: .2s;
+         }
+
 
          &:focus {
             border: none;
          }
+
+         &:hover {
+            background-color: #00e6f6;
+            color: $black-primary;
+            box-shadow: 0 0 .5rem #00e6f6;
+
+            .icon {
+               background-color: #00e6f6;
+            }
+         }
+
       }
    }
 
    &__icons {
-      flex: 0.15;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      color: #b1bdb4;
+      color: #00e6f6;
+      padding: .5rem 1rem;
+
+
 
       img {
          border-radius: 50%;
          width: 40px;
          object-fit: contain;
-         margin-left: 5px;
+         margin-left: 1rem;
       }
    }
 }
+
+@media (max-width: $breakpoint-medium) {
+   .header {
+      padding: 1rem;
+
+      form {
+         flex: .9;
+      }
+
+      &__logo {
+         width: 140px;
+         height: 30px;
+         object-fit: contain;
+         display: block;
+      }
+
+      // &__icons>*:not(img) {
+      //    display: none;
+      // }
+   }
+}
+
 
 @media (max-width: $breakpoint-small) {
    .header {
@@ -99,6 +146,13 @@
 
       &__icons>*:not(img) {
          display: none;
+      }
+
+      img {
+         border-radius: 50%;
+         width: 40px;
+         object-fit: contain;
+         margin-left: .4rem;
       }
    }
 }
