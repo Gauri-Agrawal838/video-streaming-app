@@ -22,7 +22,7 @@ A video streaming platform
 <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/About%20Screen.jpeg" width="500">
 
 ### Responsiveness
-<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Responsiveness.jpeg" width="300" height="350">
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Responsiveness.jpeg" width="250" height="350">
 
 - This platform boasts a sleek and modern interface, making it easy to navigate and explore the vast array of videos available.
 
