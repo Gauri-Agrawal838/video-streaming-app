@@ -3,12 +3,25 @@ A video streaming platform
 
 # Screenshots of Playstream Website
 
-<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Login%20Screen.jpeg" width="500"> <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Home%20Screen.jpeg" width="500">
+Login Screen
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Login%20Screen.jpeg" width="500"> 
 
-<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Categories%20Bar.jpeg" width="500"> <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Search-Bar.jpeg" width="500">
+Home Screen
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Home%20Screen.jpeg" width="500">
 
-<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Subscription%20Screen.jpeg" width="500"> <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/About%20Screen.jpeg" width="500">
+Categories Bar
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Categories%20Bar.jpeg" width="500"> 
 
+Search Bar
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Search-Bar.jpeg" width="500">
+
+Subscription Screen
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Subscription%20Screen.jpeg" width="500"> 
+
+About Screen
+<img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/About%20Screen.jpeg" width="500">
+
+Responsiveness
 <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Responsiveness.jpeg" width="500">
 
 - This platform boasts a sleek and modern interface, making it easy to navigate and explore the vast array of videos available.
