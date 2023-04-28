@@ -3,7 +3,7 @@ A video streaming platform
 
 # Screenshots of Playstream Website
 
-Login Screen
+# Login Screen
 <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Login%20Screen.jpeg" width="500"> 
 
 Home Screen
