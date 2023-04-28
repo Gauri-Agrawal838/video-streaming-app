@@ -1,4 +1,4 @@
-## PLASTREAM
+## PLAYSTREAM
 A video streaming platform
 
 # Screenshots of Playstream Website
