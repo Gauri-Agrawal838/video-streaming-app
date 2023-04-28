@@ -1,7 +1,7 @@
-## PLATFORM
+## PLASTREAM
 A video streaming platform
 
-# Screenshots of Video Streaming Platform
+# Screenshots of Playstream Website
 
 <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Login%20Screen.jpeg" width="500"> <img src="https://github.com/Gauri-Agrawal838/video-streaming-app/blob/main/src/images/Home%20Screen.jpeg" width="500">
 
